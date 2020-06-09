@@ -1,0 +1,50 @@
+  
+// Commands (ID_* and IDM_*)  
+HID_STATUS1                             0x10066
+HID_EDIT_CHANNEL                        0x18003
+HID_EDIT_SELFADDR                       0x18004
+HID_EDIT_OTHERADDR                      0x18005
+HID_TRANSMIT_START                      0x18006
+HID_RECEIVE_STARTRECEIVING              0x18007
+HID_INDIVIDUALCALL                      0x18008
+HID_NETWORKCALL                         0x18009
+HID_SOUNDING_START                      0x1800A
+HIDM_THISIS                             0x1800B
+HIDM_THISWAS                            0x1800C
+HID_VIEW_SIGNALQUALITY                  0x1800D
+HID_STARTSCANNING                       0x1800E
+HID_RX_SCANNING                         0x1800E
+HID_RX_OFF                              0x1800F
+HID_RX_SINGCHAN                         0x18010
+HID_EDIT_CONFIG                         0x18011
+HID_ALLCALL                             0x18012
+HID_AMDMESSAGE                          0x18013
+HID_VIEW_AMD                            0x18014
+HID_DEBUG_MODE                          0x18015
+  
+// Prompts (IDP_*)  
+  
+// Resources (IDR_*)  
+HIDR_MAINFRAME                          0x20080
+HIDR_ALETYPE                            0x20081
+  
+// Dialogs (IDD_*)  
+HIDD_ABOUTBOX                           0x20064
+HIDD_SELFADDR                           0x20082
+HIDD_CHANNEL                            0x20083
+HIDD_CHANNEL_LIST                       0x20085
+HIDD_SELFADDR_LIST                      0x20086
+HIDD_OTHADDR_LIST                       0x20087
+HIDD_OTHADDR                            0x20088
+HIDD_SLOT_LIST                          0x20089
+HIDD_SLOTADDR                           0x2008A
+HIDD_SELINDIV                           0x2008B
+HIDD_SOUNDADDRS                         0x2008C
+HIDD_SIGNALQUALITY                      0x2008D
+HIDD_RXCHANNEL                          0x2008E
+HIDD_CONFIG                             0x2008F
+HIDD_SELSELFADDR                        0x20090
+HIDD_AMD                                0x20091
+HIDD_AMDMESSAGE                         0x20092
+  
+// Frame Controls (IDW_*)  
