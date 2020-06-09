@@ -137,5 +137,5 @@ LONG CMainFrame::OnModemActionMessage(UINT wParam, LONG lParam)
 void CMainFrame::OnHelpFinder() 
 {
 	// Call HTML help
-  HtmlHelp(NULL, "ALE_Help.chm", HH_DISPLAY_TOPIC, 0);
+  ::HtmlHelp(NULL, "ALE_Help.chm", HH_DISPLAY_TOPIC, 0);
 }

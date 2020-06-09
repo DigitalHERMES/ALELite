@@ -90,7 +90,7 @@ public:
   HRESULT   Start( short iInOrOut );
   HRESULT   StopOutputBuffer(  );
   HRESULT   Stop( short iInOrOut );
-	          Release( );
+  void      Release( );
 private:
   // Demodulate is used only in ProcessOutputBuffer
   BOOL      Demodulate( LPBYTE pbSource, DWORD cbLength );
