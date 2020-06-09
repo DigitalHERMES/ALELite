@@ -515,7 +515,7 @@ BOOL HDAudio::InitializeBuffer(DWORD dwStart, DWORD cbLength)
 } // InitializeBuffer
 //////////////////////////////////////////////////////////////////////////////////////////////
 
-HDAudio::Release()
+void HDAudio::Release()
 {
   if (lpdsnOutput)
     lpdsnOutput->Release();
