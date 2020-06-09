@@ -1,6 +1,7 @@
 // ALEDoc.cpp : implementation of the CALEDoc class
 //  24 Jan 2000
 
+
 #include "stdafx.h"
 #include "ALE.h"
 
@@ -492,7 +493,7 @@ BOOL CALEDoc::InitializeRadio()
 
   // Initialize the radio to a known state
   pRadio->Initialize(stConfig.bRadioAddress);
-  
+
   m_bRadioInitialized = TRUE;
   return TRUE;
 }
@@ -519,7 +520,7 @@ CString CALEDoc::ParseToAddr()
 next:
   iParsePtr++;
   // First address word
-  str = (lALE & 0x1fc000) >> 14;
+  str = (LPCTSTR)((lALE & 0x1fc000) >> 14);
   if ((ch = ((lALE & 0x3f80) >> 7)) == '@')
     return str;
   str += ch;
@@ -535,7 +536,7 @@ next:
     return str;
   }
   iParsePtr++;
-  str += (lALE & 0x1fc000) >> 14;
+  str += (LPCTSTR)((lALE & 0x1fc000) >> 14);
   if ((ch = ((lALE & 0x3f80) >> 7)) == '@')
     return str;
   str += ch;
@@ -551,7 +552,7 @@ next:
     return str;
   }
   iParsePtr++;
-  str += (lALE & 0x1fc000) >> 14;
+  str += (LPCTSTR)((lALE & 0x1fc000) >> 14);
   if ((ch = ((lALE & 0x3f80) >> 7)) == '@')
     return str;
   str += ch;
@@ -567,7 +568,7 @@ next:
     return str;
   }
   iParsePtr++;
-  str += (lALE & 0x1fc000) >> 14;
+  str += (LPCTSTR)((lALE & 0x1fc000) >> 14);
   if ((ch = ((lALE & 0x3f80) >> 7)) == '@')
     return str;
   str += ch;
@@ -583,7 +584,7 @@ next:
     return str;
   }
   iParsePtr++;
-  str += (lALE & 0x1fc000) >> 14;
+  str += (LPCTSTR)((lALE & 0x1fc000) >> 14);
   if ((ch = ((lALE & 0x3f80) >> 7)) == '@')
     return str;
   str += ch;
@@ -614,9 +615,9 @@ next:
   iParsePtr = ++i;
 
   // First AMD word
-  str = (lALE & 0x1fc000) >> 14;
-  str += (lALE & 0x3f80) >> 7;
-  str += lALE & 0x7F;
+  str = (LPCTSTR)((lALE & 0x1fc000) >> 14);
+  str += (LPCTSTR)((lALE & 0x3f80) >> 7);
+  str += (LPCTSTR)(lALE & 0x7F);
 
   while (iParsePtr < indMessageBuf) {
     // Next AMD word (DATA)
@@ -627,9 +628,9 @@ next:
     }
 
     iParsePtr++;
-    str += (lALE & 0x1fc000) >> 14;
-    str += (lALE & 0x3f80) >> 7;
-    str += lALE & 0x7F;
+    str += (LPCTSTR)((lALE & 0x1fc000) >> 14);
+    str += (LPCTSTR)((lALE & 0x3f80) >> 7);
+    str += (LPCTSTR)(lALE & 0x7F);
 
     // Next AMD word (REPEAT)
     if (iParsePtr >= indMessageBuf)
@@ -642,9 +643,9 @@ next:
     }
 
     iParsePtr++;
-    str += (lALE & 0x1fc000) >> 14;
-    str += (lALE & 0x3f80) >> 7;
-    str += lALE & 0x7F;
+    str += (LPCTSTR)((lALE & 0x1fc000) >> 14);
+    str += (LPCTSTR)((lALE & 0x3f80) >> 7);
+    str += (LPCTSTR)(lALE & 0x7F);
   }
 
   str.TrimRight();
@@ -679,7 +680,7 @@ next:
     *bTis = FALSE;
 
   // First address word
-  str = (lALE & 0x1fc000) >> 14;
+  str = (LPCTSTR)((lALE & 0x1fc000) >> 14);
   if ((ch = ((lALE & 0x3f80) >> 7)) == '@')
     return str;
   str += ch;
@@ -696,7 +697,7 @@ next:
     indMessageBuf = i - 1;
     return str;
   }
-  str += (lALE & 0x1fc000) >> 14;
+  str += (LPCTSTR)((lALE & 0x1fc000) >> 14);
   if ((ch = ((lALE & 0x3f80) >> 7)) == '@')
     return str;
   str += ch;
@@ -713,7 +714,7 @@ next:
     indMessageBuf = i - 1;
     return str;
   }
-  str += (lALE & 0x1fc000) >> 14;
+  str += (LPCTSTR)((lALE & 0x1fc000) >> 14);
   if ((ch = ((lALE & 0x3f80) >> 7)) == '@')
     return str;
   str += ch;
@@ -730,7 +731,7 @@ next:
     indMessageBuf = i - 1;
     return str;
   }
-  str += (lALE & 0x1fc000) >> 14;
+  str += (LPCTSTR)((lALE & 0x1fc000) >> 14);
   if ((ch = ((lALE & 0x3f80) >> 7)) == '@')
     return str;
   str += ch;
@@ -747,7 +748,7 @@ next:
     indMessageBuf = i - 1;
     return str;
   }
-  str += (lALE & 0x1fc000) >> 14;
+  str += (LPCTSTR)((lALE & 0x1fc000) >> 14);
   if ((ch = ((lALE & 0x3f80) >> 7)) == '@')
     return str;
   str += ch;
