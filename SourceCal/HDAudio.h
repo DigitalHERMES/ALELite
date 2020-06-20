@@ -56,10 +56,10 @@ public:
   BOOL      ProcessInputBuffer( DWORD iEvent );
   BOOL      InitializeBuffer( DWORD dwStart, DWORD cblength );
   BOOL      Start(  );
-	        Stop(  );
-	        Release( );
+  BOOL      Stop(  );
+  void      Release( );
 private:
-  Error( HRESULT hr );
+  void      Error( HRESULT hr );
   // Demodulate is used only in ProcessOutputBuffer
   BOOL      Calibration( LPBYTE pbSource, DWORD cbLength );
 };

@@ -217,7 +217,7 @@ BOOL HDAudio::InitNotify(  )
 } // InitNotify
 ///////////////////////////////////////////////////////////////////////////////////////////////
 
-HDAudio::Error( HRESULT hr )
+void HDAudio::Error( HRESULT hr )
 {
 	char szMsg[256]="";
 
@@ -406,7 +406,7 @@ BOOL HDAudio::StopOutputBuffer(  )
 } // StopOutputBuffer
 //////////////////////////////////////////////////////////////////////////////////////////////
 
-HDAudio::Stop( )
+BOOL HDAudio::Stop( )
 {
   HRESULT       hr;
 
@@ -460,7 +460,7 @@ BOOL HDAudio::InitializeBuffer( DWORD dwStart, DWORD cbLength )
 } // InitializeBuffer
 //////////////////////////////////////////////////////////////////////////////////////////////
 
-HDAudio::Release( )
+void HDAudio::Release( )
 {
 if ( lpDSNotify ) lpDSNotify->Release();
 if ( lpdsnOutput ) lpdsnOutput->Release();
